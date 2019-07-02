@@ -1,0 +1,10 @@
+<div class="card-columns">
+
+  <div class="card" *ngFor="let item of items | async">
+    <img [src]="item.url" class="card-img-top img-thumbnail" [alt]="item.nombre">
+    <div class="card-body">
+      <h5>{{item.nombre}}</h5>
+      <span class="badge badge-info">Fecha subida: {{item.fechaSubida | date: 'short'}}</span>
+    </div>
+  </div>
+</div>
